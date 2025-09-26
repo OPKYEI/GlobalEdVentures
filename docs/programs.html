@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Programs – Global Education Ventures</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <style>
+        :root {
+            --primary-color: #ffffff;
+            --accent-color: #0284c7;
+            --dark-gradient-start: #0f172a;
+            --dark-gradient-end: #1e3a8a;
+            --text-dark: #111827;
+            --text-light: #4b5563;
+        }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #fff;
+            color: var(--text-dark);
+        }
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            padding: 1rem;
+            background: rgba(15, 23, 42, 0.9);
+            z-index: 5;
+        }
+        .navbar a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        .navbar a:hover {
+            color: var(--accent-color);
+        }
+        .hero {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            height: 50vh;
+            background-image:
+                linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),
+                linear-gradient(135deg, var(--dark-gradient-start), var(--dark-gradient-end));
+            color: var(--primary-color);
+            padding-top: 4rem;
+        }
+        .hero h1 {
+            font-size: 2.75rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            color: #dbeafe;
+            max-width: 700px;
+        }
+        .section {
+            padding: 3rem 1rem;
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .section h2 {
+            font-size: 2rem;
+            color: var(--dark-gradient-end);
+            margin-bottom: 1rem;
+        }
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        .card {
+            background: #f9fafb;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            text-align: left;
+        }
+        .card h3 {
+            margin-bottom: 0.5rem;
+            color: var(--dark-gradient-start);
+        }
+        .card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        footer {
+            background: #f1f5f9;
+            text-align: center;
+            padding: 1rem;
+            font-size: 0.85rem;
+            color: var(--text-light);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="programs.html">Programs</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <header class="hero">
+        <h1>Our Programs</h1>
+        <p>Discover how our initiatives are making education accessible and impactful around the world.</p>
+    </header>
+    <section class="section">
+        <h2>Featured Initiatives</h2>
+        <div class="cards">
+            <div class="card">
+                <h3>Scholarship Programs</h3>
+                <p>
+                    Our scholarship programs provide financial assistance to talented students from underserved communities, enabling them to
+                    pursue higher education and specialized training. We collaborate with universities and donors to offer scholarships that
+                    cover tuition, books and living expenses.
+                </p>
+            </div>
+            <div class="card">
+                <h3>Community Learning Centers</h3>
+                <p>
+                    We establish community-based learning centers equipped with technology, libraries and trained facilitators. These centers
+                    offer after-school tutoring, adult literacy classes and vocational training, empowering individuals of all ages to build
+                    skills and pursue their goals.
+                </p>
+            </div>
+            <div class="card">
+                <h3>Teacher Training &amp; Mentorship</h3>
+                <p>
+                    High-quality education starts with well-supported educators. Our training programs provide teachers with professional
+                    development workshops, mentorship opportunities and access to teaching resources. We aim to cultivate a network of
+                    passionate educators who can inspire and guide the next generation.
+                </p>
+            </div>
+        </div>
+    </section>
+    <footer>
+        &copy; 2025 Global Education Ventures. All rights reserved.
+    </footer>
+</body>
+</html>
