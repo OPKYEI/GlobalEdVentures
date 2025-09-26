@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sibeck Research | Market Intelligence</title>
+    <!-- Import Inter font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #ffffff;
+            --accent-color: #10b981; /* teal */
+            --secondary-color: #f9f9f9;
+            --dark-gradient-start: #1e3a8a;
+            --dark-gradient-end: #0f172a;
+        }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--primary-color);
+            background-color: #0a0a0a;
+        }
+        /* Navigation bar */
+        .navbar {
+            position: absolute;
+            top: 20px;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            z-index: 2;
+        }
+        .navbar a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        .navbar a:hover {
+            color: var(--accent-color);
+        }
+        /* Hero section */
+        .hero {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            /* Layered gradients evoke a sophisticated yet abstract backdrop */
+            background-image:
+                linear-gradient(rgba(10, 10, 10, 0.6), rgba(10, 10, 10, 0.8)),
+                radial-gradient(circle at 30% 30%, #3b82f6, transparent 60%),
+                radial-gradient(circle at 70% 70%, #10b981, transparent 60%),
+                linear-gradient(135deg, var(--dark-gradient-start), var(--dark-gradient-end));
+            background-size: cover;
+            background-position: center;
+            filter: blur(1.5px);
+            z-index: 0;
+        }
+        .hero .icon {
+            width: 160px;
+            height: 160px;
+            margin-bottom: 1.5rem;
+            z-index: 1;
+        }
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            z-index: 1;
+        }
+        .hero h2 {
+            font-size: 1.6rem;
+            font-weight: 400;
+            color: #d1d5db;
+            margin-bottom: 2rem;
+            z-index: 1;
+        }
+        .hero .cta {
+            z-index: 1;
+        }
+        .hero .cta a {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: #ffffff;
+            padding: 0.75rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: background-color 0.3s ease;
+        }
+        .hero .cta a:hover {
+            background-color: #0e7c64;
+        }
+        /* Summary section */
+        .summary {
+            background-color: var(--secondary-color);
+            color: #333;
+            padding: 4rem 1rem;
+            text-align: center;
+        }
+        .summary h2 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+        }
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .summary .card {
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            padding: 2rem;
+            flex: 1 1 280px;
+            max-width: 350px;
+            text-align: left;
+        }
+        .summary .card h3 {
+            margin-top: 0;
+            margin-bottom: 0.5rem;
+            color: #111827;
+        }
+        .summary .card p {
+            color: #374151;
+            line-height: 1.6;
+        }
+        footer {
+            background-color: #f1f1f1;
+            color: #666;
+            text-align: center;
+            padding: 1rem;
+            font-size: 0.9rem;
+        }
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.2rem; }
+            .hero h2 { font-size: 1.1rem; }
+            .navbar { gap: 24px; }
+        }
+    </style>
+</head>
+<body>
+    <header class="hero">
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <!-- Analytics icon built with inline SVG -->
+        <div class="icon" role="img" aria-label="Analytics icon">
+            <svg viewBox="0 0 120 120" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                <!-- bars -->
+                <rect x="15" y="60" width="20" height="45" rx="4" fill="#3b82f6" />
+                <rect x="50" y="45" width="20" height="60" rx="4" fill="#10b981" />
+                <rect x="85" y="30" width="20" height="75" rx="4" fill="#f59e0b" />
+                <!-- line graph -->
+                <polyline points="25,60 60,45 95,30" fill="none" stroke="#14b8a6" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+        </div>
+        <h1>Sibeck Research</h1>
+        <h2>Your partner for evidence‑driven decisions</h2>
+        <div class="cta">
+            <a href="services.html">Explore our services</a>
+        </div>
+    </header>
+    <!-- Brief summary cards on the homepage -->
+    <section class="summary">
+        <h2>What we do</h2>
+        <div class="card-container">
+            <div class="card">
+                <h3>Market Analysis</h3>
+                <p>Identify trends, gauge the competitive landscape and uncover hidden opportunities with our in‑depth market research.</p>
+            </div>
+            <div class="card">
+                <h3>Consumer Insights</h3>
+                <p>Understand your customers’ motivations, preferences and behaviors to inform product design and marketing strategy.</p>
+            </div>
+            <div class="card">
+                <h3>Strategic Advisory</h3>
+                <p>Transform insights into action. We advise on positioning, growth strategies and go‑to‑market plans tailored to your goals.</p>
+            </div>
+        </div>
+    </section>
+    <footer>
+        &copy; 2025 Sibeck Research • All rights reserved.
+    </footer>
+</body>
+</html>
